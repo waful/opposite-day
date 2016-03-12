@@ -118,7 +118,14 @@ var wordsToReplace = [
     ['existing', 'new'],
     ['related', 'unrelated'],
     ['temporary', 'permanent'],
-    ['permanent', 'temporary']
+    ['permanent', 'temporary'],
+    ['push', 'pull'],
+    ['pull', 'push'],
+    ['deep', 'shallow'],
+    ['shallow', 'deep'],
+    ['happy', 'sad'],
+    ['sad|angry', 'happy'],
+    ['not to be|to not be', 'to be']
 ];
 
 for(var i = 0; i < elements.length; i++){
@@ -140,8 +147,8 @@ for(var i = 0; i < elements.length; i++){
                 for(var k = 0; k < wordsToReplace.length; k++){
                     var wordToReplace = wordsToReplace[k];
                     replacedText = replacedText
-                        .replace(new RegExp('WAIT' + wordToReplace[0] + 'WAIT', 'g'), wordToReplace[1])
-                        .replace(new RegExp('WAIT' + toTitleCase(wordToReplace[0]) + 'WAIT', 'g'), toTitleCase(wordToReplace[1]));
+                        .replace(new RegExp('WAIT(' + wordToReplace[0] + ')WAIT', 'g'), wordToReplace[1])
+                        .replace(new RegExp('WAIT(' + toTitleCase(wordToReplace[0]) + ')WAIT', 'g'), toTitleCase(wordToReplace[1]));
                 }
                 if(replacedText !== text){
                     element.replaceChild(document.createTextNode(replacedText), node);
