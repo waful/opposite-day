@@ -7,10 +7,6 @@ function toTitleCase(str){
 }
 
 var wordsToReplace = [
-    ['up', 'down'],
-    ['down', 'up'],
-    ['left', 'right'],
-    ['right', 'left'],
     ['north', 'south'],
     ['south', 'north'],
     ['east', 'west'],
@@ -142,7 +138,15 @@ var wordsToReplace = [
     ['ascended', 'descended'],
     ['descended', 'ascended'],
     ['ascend', 'descend'],
-    ['descend', 'ascend']
+    ['descend', 'ascend'],
+    ['add', 'remove'],
+    ['remove', 'add'],
+    ['added', 'removed'],
+    ['removed', 'added'],
+    ['addition', 'removal'],
+    ['removal', 'addition']
+    ['wins', 'loses'],
+    ['won', 'lost']
 ];
 
 for(var i = 0; i < elements.length; i++){
