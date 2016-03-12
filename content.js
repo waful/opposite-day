@@ -27,6 +27,8 @@ var wordsToReplace = [
     ['ends', 'starts'],
     ['most', 'least'],
     ['least', 'most'],
+    ['more', 'less'],
+    ['less', 'more'],
     ['good', 'bad'],
     ['bad', 'good'],
     ['better', 'worse'],
@@ -39,8 +41,16 @@ var wordsToReplace = [
     ['small', 'big'],
     ['under', 'over'],
     ['over', 'under'],
-    ['new', 'old'],
-    ['old', 'new']
+    ['a new', 'an old'],
+    ['an old', 'a new'],
+    ['able', 'unable'],
+    ['unable', 'able'],
+    ['defeat', 'victory'],
+    ['victory', 'defeat'],
+    ['losing', 'winning'],
+    ['winning', 'losing'],
+    ['reduce', 'increase'],
+    ['increase', 'reduce']
 ];
 
 for(var i = 0; i < elements.length; i++){
