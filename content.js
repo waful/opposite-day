@@ -131,7 +131,7 @@ var wordsToReplace = [
     ['insecure', 'secure'],
     ['securely', 'insecurely'],
     ['insecurely', 'securely'],
-    ['a security', 'a security'],
+    ['a security', 'an security'],
     ['an insecurity', 'a insecurity'],
     ['security', 'insecurity'],
     ['insecurity', 'security'],
