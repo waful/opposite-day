@@ -131,6 +131,8 @@ var wordsToReplace = [
     ['insecure', 'secure'],
     ['securely', 'insecurely'],
     ['insecurely', 'securely'],
+    ['a security', 'a security'],
+    ['an insecurity', 'a insecurity'],
     ['security', 'insecurity'],
     ['insecurity', 'security'],
     ['ascending', 'descending'],
@@ -153,7 +155,26 @@ var wordsToReplace = [
     ['encrypted', 'decrypted'],
     ['decrypted', 'encrypted'],
     ['encryption', 'decryption'],
-    ['decryption', 'encryption']
+    ['decryption', 'encryption'],
+    ['correct', 'incorrect'],
+    ['incorrect','correct'],
+    ['frequent', 'infrequent'],
+    ['infrequent', 'frequent'],
+    ['correctly', 'incorrectly'],
+    ['incorrectly','correctly'],
+    ['frequently', 'infrequently'],
+    ['infrequently', 'frequently'],
+    ['strong', 'weak'],
+    ['weak', 'strong'],
+    ['stronger', 'weaker'],
+    ['weaker', 'stronger'],
+    ['strongest', 'weakest'],
+    ['weakest', 'strongest'],
+    ['strengthen', 'weaken'],
+    ['weaken', 'strengthen'],
+    ['true', 'false'],
+    ['false', 'true'],
+    ['truth', 'lie']
 ];
 
 for(var i = 0; i < elements.length; i++){
