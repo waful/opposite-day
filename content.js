@@ -144,9 +144,16 @@ var wordsToReplace = [
     ['added', 'removed'],
     ['removed', 'added'],
     ['addition', 'removal'],
-    ['removal', 'addition']
+    ['removal', 'addition'],
     ['wins', 'loses'],
-    ['won', 'lost']
+    ['won', 'lost'],
+    ['cannot', 'can'],
+    ['encrypt', 'decrypt'],
+    ['decrypt', 'encrypt'],
+    ['encrypted', 'decrypted'],
+    ['decrypted', 'encrypted'],
+    ['encryption', 'decryption'],
+    ['decryption', 'encryption']
 ];
 
 for(var i = 0; i < elements.length; i++){
