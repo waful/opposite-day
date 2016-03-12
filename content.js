@@ -129,7 +129,7 @@ var wordsToReplace = [
     ['shallow', 'deep'],
     ['happy', 'sad'],
     ['sad|angry', 'happy'],
-    ['not to|to not', 'to'],
+    [' not ', ' '],
     ['great', 'mediocre'],
     ['secure', 'insecure'],
     ['insecure', 'secure'],
