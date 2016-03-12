@@ -50,7 +50,17 @@ var wordsToReplace = [
     ['losing', 'winning'],
     ['winning', 'losing'],
     ['reduce', 'increase'],
-    ['increase', 'reduce']
+    ['increase', 'reduce'],
+    ['with', 'without'],
+    ['without', 'with'],
+    ['possible', 'impossible'],
+    ['impossible', 'possible'],
+    ['probable', 'improbable'],
+    ['improbable', 'probable'],
+    ['earliest', 'latest'],
+    ['latest', 'earliest'],
+    ['desert', 'dessert'],
+    ['dessert', 'desert']
 ];
 
 for(var i = 0; i < elements.length; i++){
@@ -67,9 +77,8 @@ for(var i = 0; i < elements.length; i++){
                 for(var k = 0; k < wordsToReplace.length; k++){
                     var wordToReplace = wordsToReplace[k];
                     globalSearchString += wordToReplace[0] + '|';
-                    globalSearchString += toTitleCase(wordToReplace[0]) + '|';
                 }
-                replacedText = replacedText.replace(new RegExp('\\b(' + globalSearchString.substring(0, globalSearchString.length - 1) + ')\\b', 'g'), 'WAIT$1WAIT');
+                replacedText = replacedText.replace(new RegExp('\\b(' + globalSearchString.substring(0, globalSearchString.length - 1) + ')\\b', 'gi'), 'WAIT$1WAIT');
                 for(var k = 0; k < wordsToReplace.length; k++){
                     var wordToReplace = wordsToReplace[k];
                     replacedText = replacedText
