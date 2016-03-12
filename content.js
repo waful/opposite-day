@@ -39,8 +39,6 @@ var wordsToReplace = [
     ['smallest', 'biggest'],
     ['under', 'over'],
     ['over', 'under'],
-    ['a new', 'an new'],
-    ['an old', 'a old'],
     ['new', 'old'],
     ['old', 'new'],
     ['able', 'unable'],
@@ -131,8 +129,6 @@ var wordsToReplace = [
     ['insecure', 'secure'],
     ['securely', 'insecurely'],
     ['insecurely', 'securely'],
-    ['a security', 'an security'],
-    ['an insecurity', 'a insecurity'],
     ['security', 'insecurity'],
     ['insecurity', 'security'],
     ['ascending', 'descending'],
@@ -157,11 +153,11 @@ var wordsToReplace = [
     ['encryption', 'decryption'],
     ['decryption', 'encryption'],
     ['correct', 'incorrect'],
-    ['incorrect','correct'],
+    ['incorrect', 'correct'],
     ['frequent', 'infrequent'],
     ['infrequent', 'frequent'],
     ['correctly', 'incorrectly'],
-    ['incorrectly','correctly'],
+    ['incorrectly', 'correctly'],
     ['frequently', 'infrequently'],
     ['infrequently', 'frequently'],
     ['strong', 'weak'],
@@ -174,7 +170,13 @@ var wordsToReplace = [
     ['weaken', 'strengthen'],
     ['true', 'false'],
     ['false', 'true'],
-    ['truth', 'lie']
+    ['truth', 'lie'],
+    ['slow', 'fast'],
+    ['fast', 'slow'],
+    ['slower', 'faster'],
+    ['faster', 'slower'],
+    ['slowest', 'fastest'],
+    ['fastest', 'slowest']
 ];
 
 for(var i = 0; i < elements.length; i++){
@@ -190,14 +192,15 @@ for(var i = 0; i < elements.length; i++){
                 var globalSearchString = '';
                 for(var k = 0; k < wordsToReplace.length; k++){
                     var wordToReplace = wordsToReplace[k];
-                    globalSearchString += wordToReplace[0] + '|';
+                    globalSearchString += wordToReplace[0] + '|' + toTitleCase(wordToReplace[0]) + '|' + wordToReplace[0].toUpperCase() + '|';
                 }
-                replacedText = replacedText.replace(new RegExp('\\b(' + globalSearchString.substring(0, globalSearchString.length - 1) + ')\\b', 'gi'), 'WAIT$1WAIT');
+                replacedText = replacedText.replace(new RegExp('\\b(' + globalSearchString.substring(0, globalSearchString.length - 1) + ')\\b', 'g'), 'WAIT$1WAIT');
                 for(var k = 0; k < wordsToReplace.length; k++){
                     var wordToReplace = wordsToReplace[k];
                     replacedText = replacedText
                         .replace(new RegExp('WAIT(' + wordToReplace[0] + ')WAIT', 'g'), wordToReplace[1])
-                        .replace(new RegExp('WAIT(' + toTitleCase(wordToReplace[0]) + ')WAIT', 'g'), toTitleCase(wordToReplace[1]));
+                        .replace(new RegExp('WAIT(' + toTitleCase(wordToReplace[0]) + ')WAIT', 'g'), toTitleCase(wordToReplace[1]))
+                        .replace(new RegExp('WAIT(' + wordToReplace[0].toUpperCase() + ')WAIT', 'g'), wordToReplace[1].toUpperCase());
                 }
                 if(replacedText !== text){
                     element.replaceChild(document.createTextNode(replacedText), node);
