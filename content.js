@@ -70,7 +70,6 @@ var wordsToReplace = [
     ['below', 'above'],
     ['will', 'won\'t'],
     ['may be', 'may not be'],
-    ['and', 'or'],
     ['success', 'failure'],
     ['failure', 'success'],
     ['upgrade', 'downgrade'],
