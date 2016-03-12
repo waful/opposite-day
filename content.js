@@ -129,14 +129,20 @@ var wordsToReplace = [
     ['shallow', 'deep'],
     ['happy', 'sad'],
     ['sad|angry', 'happy'],
-    ['not to be|to not be', 'to be'],
+    ['not to|to not', 'to'],
     ['great', 'mediocre'],
     ['secure', 'insecure'],
     ['insecure', 'secure'],
     ['securely', 'insecurely'],
     ['insecurely', 'securely'],
     ['security', 'insecurity'],
-    ['insecurity', 'security']
+    ['insecurity', 'security'],
+    ['ascending', 'descending'],
+    ['descending', 'ascending'],
+    ['ascended', 'descended'],
+    ['descended', 'ascended'],
+    ['ascend', 'descend'],
+    ['descend', 'ascend']
 ];
 
 for(var i = 0; i < elements.length; i++){
