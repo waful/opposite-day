@@ -36,9 +36,11 @@ var wordsToReplace = [
     ['on', 'off'],
     ['off', 'on'],
     ['large|big', 'small'],
-    ['small', 'big']
+    ['small', 'big'],
     ['under', 'over'],
-    ['over', 'under']
+    ['over', 'under'],
+    ['new', 'old'],
+    ['old', 'new']
 ];
 
 for(var i = 0; i < elements.length; i++){
