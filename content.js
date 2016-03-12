@@ -36,7 +36,11 @@ var wordsToReplace = [
     ['best', 'worst'],
     ['worst', 'best'],
     ['large|big', 'small'],
+    ['larger|bigger', 'smaller'],
+    ['largest|biggest', 'smallest'],
     ['small', 'big'],
+    ['smaller', 'bigger'],
+    ['smallest', 'biggest'],
     ['under', 'over'],
     ['over', 'under'],
     ['a new', 'an new'],
@@ -125,7 +129,14 @@ var wordsToReplace = [
     ['shallow', 'deep'],
     ['happy', 'sad'],
     ['sad|angry', 'happy'],
-    ['not to be|to not be', 'to be']
+    ['not to be|to not be', 'to be'],
+    ['great', 'mediocre'],
+    ['secure', 'insecure'],
+    ['insecure', 'secure'],
+    ['securely', 'insecurely'],
+    ['insecurely', 'securely'],
+    ['security', 'insecurity'],
+    ['insecurity', 'security']
 ];
 
 for(var i = 0; i < elements.length; i++){
