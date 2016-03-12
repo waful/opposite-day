@@ -34,7 +34,7 @@ var wordsToReplace = [
     ['better', 'worse'],
     ['worse', 'better'],
     ['best', 'worst'],
-    ['worst', 'best']
+    ['worst', 'best'],
     ['large|big', 'small'],
     ['small', 'big'],
     ['under', 'over'],
@@ -94,7 +94,9 @@ var wordsToReplace = [
     ['approved', 'rejected'],
     ['rejected', 'approved'],
     ['beautiful', 'ugly'],
-    ['ugly', 'beautiful']
+    ['ugly', 'beautiful'],
+    ['download', 'upload'],
+    ['upload', 'download']
 ];
 
 for(var i = 0; i < elements.length; i++){
