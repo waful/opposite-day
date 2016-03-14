@@ -1,8 +1,13 @@
 var elements = document.getElementsByTagName('*');
 
 function toTitleCase(str){
-    return str.replace(new RegExp('\\w+', 'g'), function(thing){
-        return thing.charAt(0).toUpperCase() + thing.substr(1).toLowerCase();
+    return str.replace(new RegExp('\\w+(\'t)?', 'g'), function(thing){
+        if(thing.length){
+            return thing.charAt(0).toUpperCase() + thing.substr(1).toLowerCase();
+        }
+        else{
+            return thing;
+        }
     });
 }
 
@@ -122,7 +127,19 @@ var wordsToReplace = [
     ['shallow', 'deep'],
     ['happy', 'sad'],
     ['sad|angry', 'happy'],
-    [' not ', ' '],
+    ['not', ''],
+    ['ain\'t', 'am'],
+    ['isn\'t', 'is'],
+    ['aren\'t', 'are'],
+    //['am', 'ain\'t'],
+    ['is', 'isn\'t'],
+    ['are', 'aren\'t'],
+    ['was', 'wasn\'t'],
+    ['were', 'weren\'t'],
+    ['wasn\'t', 'was'],
+    ['weren\'t', 'were'],
+    //['will', 'won\'t'],
+    ['won\'t', 'will'],
     ['great', 'mediocre'],
     ['secure', 'insecure'],
     ['insecure', 'secure'],
