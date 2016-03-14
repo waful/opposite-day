@@ -66,7 +66,6 @@ var wordsToReplace = [
     ['hate', 'love'],
     ['above', 'below'],
     ['below', 'above'],
-    ['will', 'won\'t'],
     ['may be', 'may not be'],
     ['success', 'failure'],
     ['failure', 'success'],
