@@ -1,7 +1,7 @@
 var elements = document.getElementsByTagName('*');
 
 function toTitleCase(str){
-    return str.replace(new RegExp('\\w+(\'t)?', 'g'), function(thing){
+    return str.replace(new RegExp('[\\w’]+', 'g'), function(thing){
         if(thing.length){
             return thing.charAt(0).toUpperCase() + thing.substr(1).toLowerCase();
         }
@@ -128,18 +128,18 @@ var wordsToReplace = [
     ['happy', 'sad'],
     ['sad|angry', 'happy'],
     ['not', ''],
-    ['ain(\'|’)t', 'am'],
-    ['isn(\'|’)t', 'is'],
-    ['aren(\'|’)t', 'are'],
-    //['am', 'ain\'t'],
-    ['is', 'isn\'t'],
-    ['are', 'aren\'t'],
-    ['was', 'wasn\'t'],
-    ['were', 'weren\'t'],
-    ['wasn(\'|’)t', 'was'],
-    ['weren(\'|’)t', 'were'],
+    ['ain’t', 'am'],
+    ['isn’t', 'is'],
+    ['aren’t', 'are'],
+    //['am', 'ain’t'],
+    ['is', 'isn’t'],
+    ['are', 'aren’t'],
+    ['was', 'wasn’t'],
+    ['were', 'weren’t'],
+    ['wasn’t', 'was'],
+    ['weren’t', 'were'],
     //['will', 'won\'t'],
-    ['won(\'|’)t', 'will'],
+    ['won’t', 'will'],
     ['great', 'mediocre'],
     ['secure', 'insecure'],
     ['insecure', 'secure'],
@@ -204,7 +204,7 @@ for(var i = 0; i < elements.length; i++){
 
             if(node.nodeType === 3){
                 var text = node.nodeValue;
-                var replacedText = text;
+                var replacedText = text.replace('\'','’');
                 var globalSearchString = '';
                 for(var k = 0; k < wordsToReplace.length; k++){
                     var wordToReplace = wordsToReplace[k];
@@ -218,6 +218,7 @@ for(var i = 0; i < elements.length; i++){
                         .replace(new RegExp('WAIT(' + toTitleCase(wordToReplace[0]) + ')WAIT', 'g'), toTitleCase(wordToReplace[1]))
                         .replace(new RegExp('WAIT(' + wordToReplace[0].toUpperCase() + ')WAIT', 'g'), wordToReplace[1].toUpperCase());
                 }
+                replacedText = replacedText.replace('’', '\'');
                 if(replacedText !== text){
                     element.replaceChild(document.createTextNode(replacedText), node);
                 }
